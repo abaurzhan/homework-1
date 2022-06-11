@@ -5,42 +5,27 @@ import "fmt"
 func main() {
 	str := "abC"
 	fmt.Print(convertToCapital(str))
+	//-----------
+	reverce(str)
+	//-----------
+	width := 7
+	height := 10
+	printrect(width, height)
 }
 
 func convertToCapital(str string) string {
 	for i := 0; i < len(str); i++ {
 		if str[i] >= 'a' && str[i] <= 'z' {
-			str[i] += 'A' - 'a'
+			str[i] += 'A' - 'a' 
 		}
 	}
 	return str
-}
-//'A' - 'a' (untyped rune constant -32) overflows byte
-
-------------------------------------
-package main
-
-import "fmt"
-
-func main() {
-	str := "abC"
-	reverce(str)
 }
 
 func reverce(str string) {
 	for i := len(str) - 1; i >= 0; i-- {
 		fmt.Print(str[i])
 	}
-}
-------------------------------------
-package main
-
-import "fmt"
-
-func main() {
-	width := 7
-	height := 10
-	printrect(width, height)
 }
 
 func printrect(width int, height int) {
