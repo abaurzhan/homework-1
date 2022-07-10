@@ -37,5 +37,7 @@ func printrect(width int, height int) {
 			fmt.Print(" ")
 		}
 		fmt.Println()
+		oeuaoeua
+		aoeu()
 	}
 }
